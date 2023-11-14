@@ -44,7 +44,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.84.7",
       "libs": {
@@ -69,10 +69,16 @@
           "bundleName": "gonac.project1.i18n.i18n"
         }
       },
-      "": {
+      "employees": {
         "dataSource": "mainService",
         "preload": true,
-        "settings": {}
+        "settings": {
+          "defaultOperationMode": "Server",
+          "defaultBindingMode": "OneWay",
+          "defaultCountMode": "Request",
+          "refreshAfterChange": true,
+          "useBatch": false
+        }
       }
     },
     "resources": {
@@ -94,20 +100,38 @@
       },
       "routes": [
         {
-          "name": "RouteEmpleados",
+          "name": "RouteLaunchpad",
           "pattern": ":?query:",
           "target": [
-            "TargetEmpleados"
+            "TargetLaunchpad"
+          ]
+        },
+        {
+          "name": "createEmployee",
+          "pattern": "createEmployee",
+          "target": [
+            "createEmployee"
           ]
         }
       ],
       "targets": {
-        "TargetEmpleados": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "Empleados",
-          "viewName": "Empleados"
+        "main": {
+          "viewName": "App",
+          "controlId": "mainContainer",
+          "controlAggregation": "pages"
+        },
+        "TargetLaunchpad": {
+          "parent": "main",
+          "viewName": "Launchpad",
+          "controlId": "mainContent",
+          "controlAggregation": "pages"
+        },
+        "createEmployee": {
+          "parent": "main",
+          "viewPath": "gonac.project1.view",
+          "viewName": "Empleados",
+          "controlId": "mainContent",
+          "controlAggregation": "pages"
         }
       }
     },

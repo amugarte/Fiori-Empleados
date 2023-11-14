@@ -32,7 +32,7 @@ server:
         backend:
           - path: /sap
             url: https://vhcgos4dci.hec.gonac.com.mx:44300
-            client: '100'
+            client: '250'
     - name: sap-fe-mockserver
       beforeMiddleware: csp
       configuration:

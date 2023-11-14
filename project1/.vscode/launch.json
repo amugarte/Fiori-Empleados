@@ -24,7 +24,7 @@
             "port": 9229,
             "env": {
                 "DEBUG": "--inspect",
-                "FIORI_TOOLS_URL_PARAMS": "sap-client=100&sap-ui-xx-viewCache=false"
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=250&sap-ui-xx-viewCache=false"
             }
         },
         {
@@ -51,7 +51,7 @@
             "outputCapture": "std",
             "port": 9229,
             "env": {
-                "FIORI_TOOLS_URL_PARAMS": "sap-client=100&sap-ui-xx-viewCache=false"
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=250&sap-ui-xx-viewCache=false"
             }
         },
         {
@@ -78,7 +78,33 @@
             "outputCapture": "std",
             "port": 9229,
             "env": {
-                "FIORI_TOOLS_URL_PARAMS": "sap-client=100&sap-ui-xx-viewCache=false"
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=250&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Empleados",
+            "cwd": "${workspaceFolder}",
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "args": [
+                "--open",
+                "index.html"
+            ],
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"c:\\\\Users\\\\amugarte\\\\projects\\\\project1\"}",
+                "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"url\":\"https://vhcgos4dci.hec.gonac.com.mx:44300\",\"client\":\"250\"}]",
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
             }
         }
     ]
