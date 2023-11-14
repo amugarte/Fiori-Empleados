@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "project1-config1",
+            "cwd": "${workspaceFolder}/project1",
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "args": [
+                "--open",
+                "index.html"
+            ],
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/Users/alexysulma/WorkSpace(Gonac)/Fiori-Empleados/project1\"}",
+                "FIORI_TOOLS_BACKEND_CONFIG": "[{\"destination\":\"https://vhcgos4dci.hec.gonac.com.mx:44300, client 250\",\"url\":\"https://vhcgos4dci.hec.gonac.com.mx:44300\",\"client\":\"250\",\"path\":\"/sap\"}]",
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+            }
+        }
+    ]
+}

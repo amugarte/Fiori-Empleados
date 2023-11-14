@@ -1,5 +1,5 @@
 <mvc:View
-        controllerName="gonac.project1.controller.Employees"
+        controllerName="gonac.project1.controller.Empleados"
         xmlns="sap.m"
         xmlns:f="sap.f"
         xmlns:tb="sap.ui.table"
@@ -111,12 +111,10 @@
             </f:DynamicPageHeader>
         </f:header>
 
-        <!-- <f:content>
-            <tb:Table id="tableEmployees"
-                        rows="{
-                            path:'employees>/Users'
-                        }"
-                        rowSelectionChange="onToUnlock">
+        <f:content>
+            <tb:Table id="lista"
+                        rows="{employees>/zcds_first_odata}"
+                        >
 
                     <tb:extension>
                         <OverflowToolbar>
@@ -137,57 +135,31 @@
                         <tb:Column>
                             <Label text="{i18n>type}" wrapping="true"/>
                             <tb:template>
-                                <Text text="{employees>Type}"/>   
+                                <Text text="{employees>Clave_Interlocutor}"/>   
                             </tb:template>
                         </tb:Column>
                         <tb:Column>
                             <Label text="{i18n>employeeId}" wrapping="true"/>
                             <tb:template>
-                                <Text text="{employees>EmployeeId}"/>   
+                                <Text text="{employees>Direccion}"/>   
+                            </tb:template>
+                        </tb:Column>
+                            <tb:Column>
+                            <Label text="{i18n>employeeId}" wrapping="true"/>
+                            <tb:template>
+                                <Text text="{employees>Titulo}"/>   
                             </tb:template>
                         </tb:Column>
                         <tb:Column>
-                            <Label text="{i18n>dni}" wrapping="true"/>
+                            <Label text="{i18n>employeeId}" wrapping="true"/>
                             <tb:template>
-                                <Text text="{employees>Dni}"/>   
+                                <Text text="{employees>Nombre1}"/>   
                             </tb:template>
                         </tb:Column>
-                        <tb:Column>
-                            <Label text="{i18n>firstName}" wrapping="true"/>
-                            <tb:template>
-                                <Text text="{employees>FirstName}"/>   
-                            </tb:template>
-                        </tb:Column>
-                        <tb:Column>
-                            <Label text="{i18n>lastName}" wrapping="true"/>
-                            <tb:template>
-                                <Text text="{employees>LastName}"/>   
-                            </tb:template>
-                        </tb:Column>
-                        <tb:Column>
-                            <Label text="{i18n>email}" wrapping="true"/>
-                            <tb:template>
-                                <Text text="{employees>SapId}"/>   
-                            </tb:template>
-                        </tb:Column>
-                        <tb:Column>
-                            <Label text="{i18n>date}" wrapping="true"/>
-                            <tb:template>
-                                <Text text="{
-                                    path:'employees>CreationDate',
-                                    type:'sap.ui.model.type.DateTime',
-                                    formatOptions:{
-                                        UTC: true,
-                                        pattern:'yyyy/MM/dd'
-                                    }
-                                }"/>   
-                            </tb:template>
-                        </tb:Column>
-                        
                     </tb:columns>
 
             </tb:Table>
-        </f:content> -->
+        </f:content>
 
     </f:DynamicPage>
 

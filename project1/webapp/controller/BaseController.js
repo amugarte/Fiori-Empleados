@@ -1,45 +1,45 @@
-sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/core/routing/History",
-    "sap/ui/core/UIComponent"
-],function(Controller, History, UIComponent){
-    "use strict";
+// sap.ui.define([
+//     "sap/ui/core/mvc/Controller",
+//     "sap/ui/core/routing/History",
+//     "sap/ui/core/UIComponent"
+// ],function(Controller, History, UIComponent){
+//     "use strict";
 
-    return Controller.extend("./.controller.BaseController",{
+//     return Controller.extend("gonac.project1.controller.App",{
 
-        getRouter: function () {
-            return UIComponent.getRouterFor(this);
-        },
+//         getRouter: function () {
+//             return UIComponent.getRouterFor(this);
+//         },
 
-        getModel: function (sName) {
-            return this.getView().getModel(sName);
-        },
+//         getModel: function (sName) {
+//             return this.getView().getModel(sName);
+//         },
 
-        setModel: function (oModel, sName) {
-            return this.getView().setModel(oModel, sName);
-        },
+//         setModel: function (oModel, sName) {
+//             return this.getView().setModel(oModel, sName);
+//         },
 
-        getResourceBundle: function () {
-            return this.getOwnerComponent().getModel("i18n").getResourceBundle();
-        },
+//     //     getResourceBundle: function () {
+//     //         return this.getOwnerComponent().getModel("i18n").getResourceBundle();
+//     //     },
 
-        onNavToLaunchpad: function () { 
-            this.getRouter().navTo("RouteLaunchpad");
-        },
+//     //     onNavToLaunchpad: function () { 
+//     //         this.getRouter().navTo("RouteLaunchpad");
+//     //     },
 
-        onNavToBack: function () {
+//     //     onNavToBack: function () {
 
-            let oHistory, sPreviousHash;
+//     //         let oHistory, sPreviousHash;
             
-            oHistory = History.getInstance();
-            sPreviousHash = oHistory.getPreviousHash();
+//     //         oHistory = History.getInstance();
+//     //         sPreviousHash = oHistory.getPreviousHash();
 
-            if (sPreviousHash !== undefined) {
-                window.history.go(-1);
-            } else {
-                this.getRouter().navTo("launchpad");
-            }
+//     //         if (sPreviousHash !== undefined) {
+//     //             window.history.go(-1);
+//     //         } else {
+//     //             this.getRouter().navTo("launchpad");
+//     //         }
 
-        }
-    });
-});
+//     //     }
+//     });
+// });

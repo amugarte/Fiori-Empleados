@@ -103,37 +103,20 @@
           "name": "RouteLaunchpad",
           "pattern": ":?query:",
           "target": [
-            "TargetLaunchpad"
-          ]
-        },
-        {
-          "name": "createEmployee",
-          "pattern": "createEmployee",
-          "target": [
-            "createEmployee"
+            "TargetEmpleaados"
           ]
         }
       ],
       "targets": {
-        "main": {
-          "viewName": "App",
-          "controlId": "mainContainer",
-          "controlAggregation": "pages"
-        },
-        "TargetLaunchpad": {
-          "parent": "main",
-          "viewName": "Launchpad",
-          "controlId": "mainContent",
-          "controlAggregation": "pages"
-        },
-        "createEmployee": {
-          "parent": "main",
-          "viewPath": "gonac.project1.view",
-          "viewName": "Empleados",
-          "controlId": "mainContent",
-          "controlAggregation": "pages"
+        "TargetEmpleaados": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Empleados",
+          "viewName": "Empleados"
         }
       }
+
     },
     "rootView": {
       "viewName": "gonac.project1.view.App",
