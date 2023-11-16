@@ -7,7 +7,7 @@ sap.ui.define([
   function (BaseController) {
       "use strict";
 
-      return BaseController.extend("./.controller.App", {
+      return BaseController.extend("gonac.project1.controller.App", {
 
           onInit: function () {
               this.onNavToLaunchpad();

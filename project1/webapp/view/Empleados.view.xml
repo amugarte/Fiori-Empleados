@@ -1,5 +1,5 @@
 <mvc:View
-        controllerName="gonac.project1.controller.Employees"
+        controllerName="gonac.project1.controller.Empleados"
         xmlns="sap.m"
         xmlns:f="sap.f"
         xmlns:tb="sap.ui.table"
